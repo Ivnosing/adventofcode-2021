@@ -7,7 +7,7 @@
       last: curr,
       count: last < curr ? count + 1 : count
     }),
-    { last: depthMeasurements?.[0], count: 0 }
+    { last: depthMeasurements[0], count: 0 }
   );
 
   console.log(increments.count);
