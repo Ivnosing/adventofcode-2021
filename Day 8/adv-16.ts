@@ -21,12 +21,12 @@
   const getDigitMap = (digits: string[]) => {
     try {
       const map = new Map<string, string>();
-  
+
       const eight = digits.find(d => d.length === 7) as string;
       const four = digits.find(d => d.length === 4) as string;
       const seven = digits.find(d => d.length === 3) as string;
       const one = digits.find(d => d.length === 2) as string;
-  
+
       const addDigits = (...ds: string[]) =>
         [...new Set(ds.flatMap(d => d.split('')))].join('');
       const subtractDigits = (d1: string, d2: string) =>
@@ -96,7 +96,7 @@
 
   const entriesValues = entries.map(entry => getEntryValue(entry));
 
-  console.log(Object.values(entriesValues).reduce((a, b) => a + b));
+  console.log(entriesValues.reduce((a, b) => a + b));
 
   //    0:      1:      2:      3:      4:
   //   aaaa    ....    aaaa    aaaa    ....
